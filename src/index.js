@@ -78,9 +78,24 @@ botonValidar.addEventListener("click", () => {
   }
 });
 
-const botonRetorno = document.getElementById("retornoInicioInv");
 
-botonRetorno.addEventListener("click", () => {
+//Boton de retorno para tarjeta valida;
+const botonRetornoValid = document.getElementById("retornoInicioValid");
+
+botonRetornoValid.addEventListener("click", () => {
+    numTarjeta = "";
+    inputTarjeta.value = "";
+    vistaInicioDiv.style.display = "block";
+    vistaValidadorDiv.style.display = "none";
+    vistaTarjetaValidaDiv.style.display = "none";
+    vistaTarjetaInvalidaiv.style.display = "none";
+ 
+});
+
+//Boton de retorno para tarjeta invalida;
+const botonRetornoInv = document.getElementById("retornoInicioInv");
+
+botonRetornoInv.addEventListener("click", () => {
     numTarjeta = "";
     inputTarjeta.value = "";
     vistaInicioDiv.style.display = "block";
