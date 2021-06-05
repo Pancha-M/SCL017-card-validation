@@ -54,3 +54,26 @@ inputTarjeta.addEventListener("keydown", (event) => {
     console.log("accion borrar" + event.key);
   }
 });
+
+const vistaTarjetaValidaDiv = document.getElementById("vistaTarjetaValida");
+const vistaTarjetaInvalidaiv = document.getElementById("vistaTarjetaInvalida");
+
+const botonValidar = document.getElementById("buttonVerify");
+
+botonValidar.addEventListener("click", () => {
+  const tarjetaValida = validator.isValid(numTarjeta);
+  //AQUI HAY QUE AGREGAR EL MASKIFY
+
+// SE DEBE VER LA PANTALLA DE TARJETA VALIDA O INVALIDA DEPENDIENDOD EL RESULTADO DEL VALIDADOR
+  if (tarjetaValida === true) {
+    vistaInicioDiv.style.display = "none";
+    vistaValidadorDiv.style.display = "none";
+    vistaTarjetaValidaDiv.style.display = "block";
+    vistaTarjetaInvalidaiv.style.display = "none";
+  } else {
+    vistaInicioDiv.style.display = "none";
+    vistaValidadorDiv.style.display = "none";
+    vistaTarjetaValidaDiv.style.display = "none";
+    vistaTarjetaInvalidaiv.style.display = "block";
+  }
+});
