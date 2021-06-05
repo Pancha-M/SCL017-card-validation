@@ -7,7 +7,7 @@ const vistaInicioDiv = document.getElementById("vistaInicio");
 const vistaValidadorDiv = document.getElementById("vistaValidador");
 
 //Boton de incio para pasar a vista validador
-buttonStart.addEventListener("click", function () {
+buttonStart.addEventListener("click", ( )=> {
   vistaInicioDiv.style.display = "none";
   vistaValidadorDiv.style.display = "block";
 });
@@ -76,4 +76,16 @@ botonValidar.addEventListener("click", () => {
     vistaTarjetaValidaDiv.style.display = "none";
     vistaTarjetaInvalidaiv.style.display = "block";
   }
+});
+
+const botonRetorno = document.getElementById("retornoInicioInv");
+
+botonRetorno.addEventListener("click", () => {
+    numTarjeta = "";
+    inputTarjeta.value = "";
+    vistaInicioDiv.style.display = "block";
+    vistaValidadorDiv.style.display = "none";
+    vistaTarjetaValidaDiv.style.display = "none";
+    vistaTarjetaInvalidaiv.style.display = "none";
+ 
 });
