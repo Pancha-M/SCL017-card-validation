@@ -20,6 +20,9 @@ let numTarjeta = "";
 //Transformar el numero ingresado al input en un string
 
 inputTarjeta.addEventListener("keydown", (event) => {
+  event.preventDefault();
+  //evento asociado a cuando se presiona una tecla dentro del input
+  //cancelar las acciones que por defecto tiene el input, para determinarlas
 
   if (!isNaN(event.key) || event.key == "Backspace") {
     //se puede presiona un número o la tecla borrar
