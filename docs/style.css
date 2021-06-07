@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display&family=Roboto:wght@300&family=Source+Code+Pro:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap");
+
+body {
+  background-color: #def2ef;
+  background-image: url(background.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.cuadro {
+  background: rgba(255, 255, 255, 0.637);
+  width: 365px;
+  height: 580px;
+  box-shadow: 3px 13px 30px 0px rgb(21, 34, 67);
+  box-shadow: 0 30px 60px 0 rgba(57, 95, 141, 0.4);
+  border-radius: 15px;
+}
+
+.marca {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  font-family: "Roboto", sans-serif;
+  justify-content: right;
+  /* /* border-radius: 15px;
+  background-size: 100% 100%; */
+  margin-right: 40px;
+  margin-left: 40px;
+  margin-top: 80px;
+}
+
+.panelInicio {
+  /* width: 600px; */
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.cardInicio {
+  font: 16px/1.5;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 272px;
+  height: 173px;
+  text-align: left;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+  border-radius: 15px;
+  box-sizing: border-box;
+  background-image: linear-gradient(#040f2e, #39545f);
+}
+
+.numberInicio {
+  font-size: 20px;
+  padding: 70px 0 12px;
+  text-align: center;
+  font-family: "Source Code Pro";
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+.fechaInicio {
+  font-size: 14px;
+  text-align: center;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+.usuarioInicio {
+  text-align: left;
+  font-size: 17px;
+  font-family: "Source Code Pro";
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+img {
+  width: 30%;
+}
+
+.logoInicio {
+  position: absolute;
+  right: 90px;
+  bottom: 80px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.botonStart {
+  box-shadow: 0px 1px 19px -9px #f194e2;
+  background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+  background-color: #599bb3;
+  border-radius: 11px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 13px 27px;
+  text-decoration: none;
+  text-shadow: -2px 0px 5px #144a5c;
+  margin-bottom: 15px;
+}
+
+.boton:hover {
+  background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+  background-color: #e405a1;
+}
+.boton:active {
+  position: relative;
+  top: 1px;
+}
+
+.bajadaBoton {
+  color: rgb(0, 0, 0);
+  font-family: "Roboto", sans-serif;
+  font-size: 90%;
+  /* margin-right: 40px;
+  margin-left: 40px;
+  margin-top: 70px; */
+}
+
+footer {
+  background: #144a5c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+a {
+  color: rgb(255, 255, 255);
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.panelValidacion {
+  /* width: 600px; */
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.cardValidacion {
+  font: 16px/1.5;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 300px;
+  height: 201px;
+  text-align: left;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+  border-radius: 15px;
+  box-sizing: border-box;
+  background-image: linear-gradient(#040f2e, #39545f);
+}
+
+.inputTarjeta {
+  font-size: 16px;
+  font-family: "Source Code Pro";
+  padding: 10px 29px;
+  text-align: center;
+  margin-top: 30px;
+  border-width: 0px;
+  border-color: #a0a0a0;
+  background-color: #ffffff;
+  color: #808080;
+  border-style: solid;
+  border-radius: 28px;
+  box-shadow: 0px 0px 3px rgba(97, 95, 95, 0.68);
+  text-shadow: -1px 1px 1px rgba(66, 66, 66, 0.58);
+}
+
+.fechaValidacion {
+  font-size: 14px;
+  text-align: center;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+  margin-top: 20px;
+}
+
+.usuarioValidacion {
+  text-align: left;
+  font-size: 17px;
+  font-family: "Source Code Pro";
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+  margin-top: 10px;
+}
+
+.validacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  margin-top: 0px;
+}
+
+.botonValidar {
+  box-shadow: 0px 1px 19px -9px #276873;
+  background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+  background-color: #599bb3;
+  border-radius: 11px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 3px;
+  text-decoration: none;
+  text-shadow: -2px 0px 5px #144a5c;
+  margin-top: 5px;
+}
+
+.panelValInv {
+  /* width: 600px; */
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.cardValInv {
+  font: 16px/1.5;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 300px;
+  height: 201px;
+  text-align: left;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+  border-radius: 15px;
+  box-sizing: border-box;
+  background-image: linear-gradient(#040f2e, #39545f);
+}
+
+.fechaValInv {
+  font-size: 14px;
+  text-align: center;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+  margin-top: 20px;
+}
+
+p {
+  font-size: 24px;
+  text-align: center;
+  font-family: "Source Code Pro";
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+}
+.usuarioValInv {
+  text-align: left;
+  font-size: 17px;
+  font-family: "Source Code Pro";
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+  margin-top: 10px;
+}
+
+.retorno {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.botonRetorno {
+  box-shadow: 0px 1px 19px -9px #276873;
+  background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+  background-color: #599bb3;
+  border-radius: 11px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 3px;
+  text-decoration: none;
+  text-shadow: -2px 0px 5px #144a5c;
+  margin-top: 5px;
+}
+
+.vistaBlock {
+  display: block;
+}
+
+.vistaNone {
+  display: none;
+}
