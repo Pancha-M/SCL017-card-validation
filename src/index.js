@@ -7,7 +7,7 @@ const vistaInicioDiv = document.getElementById("vistaInicio");
 const vistaValidadorDiv = document.getElementById("vistaValidador");
 
 //Boton de incio para pasar a vista validador
-buttonStart.addEventListener("click", ( )=> {
+buttonStart.addEventListener("click", () => {
   vistaInicioDiv.style.display = "none";
   vistaValidadorDiv.style.display = "block";
 });
@@ -54,17 +54,30 @@ inputTarjeta.addEventListener("keydown", (event) => {
     console.log("accion borrar" + event.key);
   }
 });
+const maskify = {
+  enmascarar: (numeroTarjeta) => {
+    const tcNumero = numeroTarjeta.split("");
+    for (let i = 0; i < tcNumero.length - 4; i++) {
+      tcNumero[i] = "x";
+    }
+    return tcNumero.join("");
+  },
+};
 
+//Vistas pantalla tarjeta Valida y tarjeta Invalida
 const vistaTarjetaValidaDiv = document.getElementById("vistaTarjetaValida");
 const vistaTarjetaInvalidaiv = document.getElementById("vistaTarjetaInvalida");
 
 const botonValidar = document.getElementById("buttonVerify");
 
+//Se conecta el evento click y se desencadena con el validador
 botonValidar.addEventListener("click", () => {
   const tarjetaValida = validator.isValid(numTarjeta);
-  //AQUI HAY QUE AGREGAR EL MASKIFY
+  const numeroEnmascarado = maskify.enmascarar(numTarjeta);
 
-// SE DEBE VER LA PANTALLA DE TARJETA VALIDA O INVALIDA DEPENDIENDOD EL RESULTADO DEL VALIDADOR
+  const enmascaradoNumero = document.getElementById("enmascaradoNumero");
+
+  // SE DEBE VER LA PANTALLA DE TARJETA VALIDA O INVALIDA DEPENDIENDOD EL RESULTADO DEL VALIDADOR
   if (tarjetaValida === true) {
     vistaInicioDiv.style.display = "none";
     vistaValidadorDiv.style.display = "none";
@@ -75,32 +88,30 @@ botonValidar.addEventListener("click", () => {
     vistaValidadorDiv.style.display = "none";
     vistaTarjetaValidaDiv.style.display = "none";
     vistaTarjetaInvalidaiv.style.display = "block";
+    enmascaradoNumero.innerText = `${numeroEnmascarado}`;
   }
 });
-
 
 //Boton de retorno para tarjeta valida;
 const botonRetornoValid = document.getElementById("retornoInicioValid");
 
 botonRetornoValid.addEventListener("click", () => {
-    numTarjeta = "";
-    inputTarjeta.value = "";
-    vistaInicioDiv.style.display = "block";
-    vistaValidadorDiv.style.display = "none";
-    vistaTarjetaValidaDiv.style.display = "none";
-    vistaTarjetaInvalidaiv.style.display = "none";
- 
+  numTarjeta = "";
+  inputTarjeta.value = "";
+  vistaInicioDiv.style.display = "block";
+  vistaValidadorDiv.style.display = "none";
+  vistaTarjetaValidaDiv.style.display = "none";
+  vistaTarjetaInvalidaiv.style.display = "none";
 });
 
 //Boton de retorno para tarjeta invalida;
 const botonRetornoInv = document.getElementById("retornoInicioInv");
 
 botonRetornoInv.addEventListener("click", () => {
-    numTarjeta = "";
-    inputTarjeta.value = "";
-    vistaInicioDiv.style.display = "block";
-    vistaValidadorDiv.style.display = "none";
-    vistaTarjetaValidaDiv.style.display = "none";
-    vistaTarjetaInvalidaiv.style.display = "none";
- 
+  numTarjeta = "";
+  inputTarjeta.value = "";
+  vistaInicioDiv.style.display = "block";
+  vistaValidadorDiv.style.display = "none";
+  vistaTarjetaValidaDiv.style.display = "none";
+  vistaTarjetaInvalidaiv.style.display = "none";
 });

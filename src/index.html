@@ -2,48 +2,69 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Validador de tarjetas</title>
+    <title>Card Validator</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
+
     <!--pantalla de inicio-->
-    <div class="vistaBlock" id="vistaInicio">
+      <div class="vistaBlock" id="vistaInicio">
+        <div class="cuadro">
         <!--Titulo como un logo de la app que se mantendra en todas las vistas-->
         <div class="marca">
-            <h1 class = "titulo">Card Validator</h1>
-            <h2 class = "bajadaDeTitulo">Verfica la validez de cualquier tarjeta</h2>
+    <div class= "tarjeta">  
+            <h1>Card Validator</h1>
             </div>
-      <main>
-        <!--Arriba del boton de start ira una imagen de una tarjeta con una lupa-->
-      <div class=  <section id="start">
-          <button id="buttonStart" class="boton">Start</button>
-        </section>
-        <section id="preguntasFrecuentes">
-          <!--Esta es una seccion creada para que el usuario aclare sus dudas sobre la seguridad de la app-->
-          <a>Preguntas frecuentes sobre la App</a>
-        </section>
-      </main>
-      <footer></footer>
+
+<!-- CARD -->
+<main>
+<div class="panelInicio">
+    <div class="cardInicio">
+      <div class="numberInicio">4111 1111 1111 1111</div>
+      <div class="fechaInicio">00/00</div>
+      <div class="usuarioInicio">Nuevo usuario</div>
+      <img class="logoInicio" src = tarjetas.png>
+  </div>
+</div>
+</div>
+<div class=section id="start">
+  <button id="buttonStart" class="botonStart">Start</button>
+                         <h3 class = "bajadaBoton">Compatible con tarjetas nacionales e internacioles</h3>     
+</div>
+        <!--Arriba del boton de start ira una imagen de una tarjeta con una lupa-->  
+      <footer>
+        <!--Esta es una seccion creada para que el usuario aclare sus dudas sobre la seguridad de la app-->
+        <a>Preguntas frecuentes sobre la App</a>
+    </footer>
     </div>
+  </div>
 
 <!--PANTALLA DE VALIDACION-->
     <div class="vistaNone" id="vistaValidador">
-      <header>
+      <<div class="cuadro">
+        <!--Titulo como un logo de la app que se mantendra en todas las vistas-->
         <div class="marca">
-            <h1 class = "titulo">Card Validator</h1>
-            <h2 class = "bajadaDeTitulo">Verfica la validez de cualquier tarjeta</h2>
+          <div class= "tarjeta">  
+            <h1>Card Validator</h1>
             </div>
+            
+            
+            <div class="panelValidacion">
+              <div class="cardValidacion">
+                <input type="text"  id="numeroTarjeta" placeholder="xxxx xxxx xxxx xxxx" class="inputTarjeta"/>
+                <div class="fechaValidacion">00/00</div>
+                <div class="usuarioValidacion">Nuevo usuario</div>
+             <!-- <img class="logoValidacionygh" src = tarjetas.png> -->
+              </div> 
+          </div>
+          </div>
+
           <h2>Ingresa los datos de la tarjeta</h2>
           <!--simular una tarjeta de credito y cada input debe calzar con la sección de la tarjeta donde van los números
             Al ingresar los numeros estos tienen que cambiar automaticamente a X en los primeros 3 input. Analizar si funciona inputs separados
             o es mejor tener un solo input, revisar al momento de trabajar el código -->
-          <input
-            type="text"
-            id="numeroTarjeta"
-            placeholder="xxxx xxxx xxxx xxxx"
-            class="inputTarjeta"
-          />
+         
           <button id="buttonVerify" class="boton">Validar tarjeta</button>
         </section>
         <section id="preguntasFrecuentes">
@@ -52,46 +73,63 @@
       </main>
       <footer></footer>
     </div>
+    </div>
+    </div>
 
 <!--VISTA TARJETA VALIDA-->
     <div class="vistaNone" id="vistaTarjetaValida">
+      <div class="cuadro">
       <header>
         <h1>Card Validator</h1>
       </header>
-      <main>
+      <main></main>
         <h2>tarjeta validada correctamente</h2>
         <!--Aquí tengo que ver como hago que los núemro que se ingresen en el input anterior queden fijados y con XXXX
 sobre la "tarjeta" que quedara puesta y solo se vean los últimos ticket. Insertaré un gif de "visto bueno"-->
         <section id="returnInicio">
-          <button id="retornoInicioValid" class="return">
+          <button id="retornoInicioValid" class="boton">
             Validar nueva tarjeta
           </button>
-        </section>
-        <section id="preguntasFrecuentes">
-          <a>Preguntas frecuentes sobre la App</a>
-        </section>
       </main>
-      <footer></footer>
+      <footer>
+        <p>Preguntas frecuentes sobre la App</p>
+      </footer>
+      </div>
     </div>
+
 <!--VISTA TARJETA INVALIDA-->
     <div class="vistaNone" id="vistaTarjetaInvalida">
-      <header>
-        <h1>Card Validator</h1>
-      </header>
-      <main>
-        <h2>Tarjeta inválida</h2>
-        <!--Aquí tengo que ver como hago que los núemro que se ingresen en el input anterior queden fijados y con XXXX
-sobre la "tarjeta" que quedara puesta y solo se vean los últimos ticket. Insertaré un gif de "invalido/error"-->
-        <section id="returnInicio">
-          <button id="retornoInicioInv" class="boton">Validar otra vez</button>
+      <div class="cuadro">
+        <div class="marca">
+          <h1>Card Validator</h1>
+          <h2>Tarjeta Invalida</h2>
+          
+          <div class="panel">
+            <div class="card">
+              <p id="enmascaradoNumero"></p> 
+              <div class="expiry-date">00/00</div>
+              <div class="owner">Nuevo usuario</div>
+              <!-- <img class="logo" src = tarjetas.png> -->
+            </div>
+          </div>
+
+        
+        <!--simular una tarjeta de credito y cada input debe calzar con la sección de la tarjeta donde van los números
+          Al ingresar los numeros estos tienen que cambiar automaticamente a X en los primeros 3 input. Analizar si funciona inputs separados
+          o es mejor tener un solo input, revisar al momento de trabajar el código -->
+       
+          <button id="retornoInicioInv" class="boton">
+            Validar nueva tarjeta
           </button>
-        </section>
-        <section id="preguntasFrecuentes">
-          <a>Preguntas frecuentes sobre la App</a>
-        </section>
-      </main>
-      <footer></footer>
-    </div>
+      </section>
+      <section id="preguntasFrecuentes">
+        <a>Preguntas frecuentes sobre la App</a>
+      </section>
+    </main>
+    <footer></footer>
+  </div>
+  </div>
+  </div>
 
     <script src="index.js" type="module"></script>
   </body>
