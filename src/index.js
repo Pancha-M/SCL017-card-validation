@@ -54,6 +54,7 @@ inputTarjeta.addEventListener("keydown", (event) => {
     console.log("accion borrar" + event.key);
   }
 });
+
 const maskify = {
   enmascarar: (numeroTarjeta) => {
     const tcNumero = numeroTarjeta.split("");
@@ -75,7 +76,8 @@ botonValidar.addEventListener("click", () => {
   const tarjetaValida = validator.isValid(numTarjeta);
   const numeroEnmascarado = maskify.enmascarar(numTarjeta);
 
-  const enmascaradoNumero = document.getElementById("enmascaradoNumero");
+  const enmascaradoNumeroVal = document.getElementById("enmascaradoNumeroVal");
+  const enmascaradoNumeroInv = document.getElementById("enmascaradoNumeroInv");
 
   // SE DEBE VER LA PANTALLA DE TARJETA VALIDA O INVALIDA DEPENDIENDOD EL RESULTADO DEL VALIDADOR
   if (tarjetaValida === true) {
@@ -83,12 +85,13 @@ botonValidar.addEventListener("click", () => {
     vistaValidadorDiv.style.display = "none";
     vistaTarjetaValidaDiv.style.display = "block";
     vistaTarjetaInvalidaiv.style.display = "none";
+    enmascaradoNumeroVal.innerText = `${numeroEnmascarado}`;
   } else {
     vistaInicioDiv.style.display = "none";
     vistaValidadorDiv.style.display = "none";
     vistaTarjetaValidaDiv.style.display = "none";
     vistaTarjetaInvalidaiv.style.display = "block";
-    enmascaradoNumero.innerText = `${numeroEnmascarado}`;
+    enmascaradoNumeroInv.innerText = `${numeroEnmascarado}`;
   }
 });
 
