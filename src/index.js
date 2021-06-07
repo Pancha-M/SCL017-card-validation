@@ -1,4 +1,5 @@
 import validator from "./validator.js";
+import maskify   from "./maskify.js"
 
 console.log(validator);
 
@@ -27,7 +28,7 @@ inputTarjeta.addEventListener("keydown", (event) => {
   event.preventDefault();
   //evento asociado a cuando se presiona una tecla dentro del input
   //cancelar las acciones que por defecto tiene el input, para determinarlas
-
+  
   if (!isNaN(event.key) || event.key == "Backspace") {
     //se puede presiona un número o la tecla borrar
     //!inNan no es un no numero, es decir es un numero
@@ -37,6 +38,7 @@ inputTarjeta.addEventListener("keydown", (event) => {
     console.log("accion ejecutada" + event.key);
   }
 
+ 
   if (!isNaN(event.key)) {
     //al presionar una tecla que es un numero
     numTarjeta = numTarjeta + event.key;
@@ -45,6 +47,7 @@ inputTarjeta.addEventListener("keydown", (event) => {
     //Se tiene que ver el valor almacenado en el input
     //VER SI SE PUEDE CREAR EL ESPACIO CADA 4 NUMEROS
   }
+
   if (event.key == "Backspace") {
     //Si se quiere borrar un numero se tiene que borrar el valor visible y el valor almacenado
     inputTarjeta.value = inputTarjeta.value.slice(0, -1);
@@ -55,15 +58,7 @@ inputTarjeta.addEventListener("keydown", (event) => {
   }
 });
 
-const maskify = {
-  enmascarar: (numeroTarjeta) => {
-    const tcNumero = numeroTarjeta.split("");
-    for (let i = 0; i < tcNumero.length - 4; i++) {
-      tcNumero[i] = "x";
-    }
-    return tcNumero.join("");
-  },
-};
+
 
 //Vistas pantalla tarjeta Valida y tarjeta Invalida
 const vistaTarjetaValidaDiv = document.getElementById("vistaTarjetaValida");
@@ -80,13 +75,23 @@ botonValidar.addEventListener("click", () => {
   const enmascaradoNumeroInv = document.getElementById("enmascaradoNumeroInv");
 
   // SE DEBE VER LA PANTALLA DE TARJETA VALIDA O INVALIDA DEPENDIENDOD EL RESULTADO DEL VALIDADOR
-  if (tarjetaValida === true) {
+  if (numTarjeta == "") {
+    alert("Ingresa un número de tarjeta");
+    
+  }
+  
+  else if (numeroEnmascarado.length < 14){
+  alert("Ingresa un número de tarjeta");
+
+  }
+
+  else if (tarjetaValida === true) {
     vistaInicioDiv.style.display = "none";
     vistaValidadorDiv.style.display = "none";
     vistaTarjetaValidaDiv.style.display = "block";
     vistaTarjetaInvalidaiv.style.display = "none";
     enmascaradoNumeroVal.innerText = `${numeroEnmascarado}`;
-  } else {
+  } else  {
     vistaInicioDiv.style.display = "none";
     vistaValidadorDiv.style.display = "none";
     vistaTarjetaValidaDiv.style.display = "none";
