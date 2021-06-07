@@ -8,4 +8,4 @@ const maskify = {
     },
   };
 
-  export default maskifys;
+  export default maskify;
